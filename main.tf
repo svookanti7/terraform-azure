@@ -38,7 +38,7 @@ resource "azurerm_storage_account" "sqlserver_storage" {
 
 resource "azurerm_sql_database" "serveless_database" {
   name                = var.database_name
-  edition             = "GeneralPurpose"
+  edition             = "General Purpose: Serverless, Gen5, 1 vCore, 32 GB storage"
   resource_group_name = azurerm_resource_group.infosys-poc.name
   location            = azurerm_resource_group.infosys-poc.location
   server_name         = azurerm_sql_server.infosys-poc.name
